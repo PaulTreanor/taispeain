@@ -56,8 +56,8 @@ export default function LinksBlog() {
   return (
     <div className="links-container">
       <header className="site-header">
-        <h1 className="irish-title">Naisc</h1>
-        <p className="tagline">Curated links & thoughts</p>
+        <h1 className="irish-title">Taispeáin</h1>
+        <p className="tagline">Naisc agus smaointe</p>
       </header>
       
       <main className="links-main">
