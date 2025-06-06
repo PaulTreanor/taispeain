@@ -11,7 +11,7 @@ export async function fetchLinkEntries() {
   const token = process.env.GITHUB_TOKEN; // Optional for public repos
   
   try {
-    const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/issues?labels=link,published&state=open&sort=created&direction=desc&creator=${owner}`;
+    const url = `${GITHUB_API_BASE}/repos/${owner}/${repo}/issues?labels=link,published&state=open&sort=created&direction=desc`;
     
     const headers = {
       'Accept': 'application/vnd.github.v3+json',
