@@ -1,22 +1,46 @@
 ---
-import HelloReact from '../components/HelloReact.jsx';
+import LinksBlog from '../components/LinksBlog.jsx';
 ---
 
-<html lang="en">
+<html lang="ga">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>Astro with React</title>
-    <style>
-      html, body {
-        margin: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <title>Taispeáin</title>
   </head>
   <body>
-    <HelloReact client:load />
+    <LinksBlog client:load />
   </body>
 </html>
+
+<style>
+  :root {
+    --forest-green: #2d5016;
+    --sage-green: #8fbc8f;
+    --cream: #faf7f0;
+    --warm-white: #fefefe;
+    --gold: #d4af37;
+    --stone: #6b7280;
+    --deep-blue: #1e3a8a;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 100%);
+    color: var(--forest-green);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  .irish-title {
+    font-family: 'Uncial Antiqua', cursive;
+    color: var(--forest-green);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+</style>

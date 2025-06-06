@@ -5,7 +5,7 @@ export default function Layout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <title>Astro with React</title>
+        <title>Taispeáin</title>
         <style dangerouslySetInnerHTML={{
           __html: `
             html, body {
