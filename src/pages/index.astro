@@ -1,5 +1,8 @@
 ---
 import LinksBlog from '../components/LinksBlog.jsx';
+import { fetchLinkEntries } from '../lib/github.js';
+
+const linkEntries = await fetchLinkEntries();
 ---
 
 <html lang="ga">
@@ -13,7 +16,7 @@ import LinksBlog from '../components/LinksBlog.jsx';
     <title>Taispeáin</title>
   </head>
   <body>
-    <LinksBlog client:load />
+    <LinksBlog client:load linkEntries={linkEntries} />
   </body>
 </html>
 

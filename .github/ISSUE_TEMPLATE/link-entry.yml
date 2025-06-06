@@ -1,0 +1,37 @@
+name: Add Link Entry
+description: Add a new link to the blog
+title: "[LINK] "
+labels: ["link", "published"]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link URL
+      description: The URL you want to share
+      placeholder: https://example.com/article
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Link Title
+      description: The title of the link/article
+      placeholder: An Interesting Article About Something
+    validations:
+      required: true
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: Who wrote or created this content
+      placeholder: Jane Doe
+    validations:
+      required: true
+  - type: textarea
+    id: comment
+    attributes:
+      label: Your Comment
+      description: Your thoughts, commentary, or why you're sharing this
+      placeholder: This article provides great insights into...
+    validations:
+      required: false

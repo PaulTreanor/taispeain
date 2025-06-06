@@ -1,49 +1,6 @@
 import { useState } from 'react';
 
-const mockLinks = [
-  {
-    id: 1,
-    title: "The Future of Web Development",
-    url: "https://example.com/future-web-dev",
-    author: "Jane Doe",
-    date: "2024-01-15",
-    comment: "Fascinating insights into where the web is heading. The section on distributed computing really resonated with my recent experiments."
-  },
-  {
-    id: 2,
-    title: "Understanding Celtic Typography",
-    url: "https://example.com/celtic-typography",
-    author: "Seán Ó Briain",
-    date: "2024-01-12",
-    comment: "Beautiful exploration of traditional Irish letterforms. Makes me want to redesign everything with proper respect for our heritage."
-  },
-  {
-    id: 3,
-    title: "Building Sustainable Software",
-    url: "https://example.com/sustainable-software",
-    author: "Tech Collective",
-    date: "2024-01-10",
-    comment: "Practical advice on reducing digital carbon footprints. Their metrics for measuring code efficiency are surprisingly actionable."
-  },
-  {
-    id: 4,
-    title: "The Philosophy of Simple Design",
-    url: "https://example.com/simple-design",
-    author: "Maria Santos",
-    date: "2024-01-08",
-    comment: "Minimalism done right. The author's approach to constraint-based creativity mirrors traditional Irish storytelling techniques beautifully."
-  },
-  {
-    id: 5,
-    title: "Modern Gaeilge Resources",
-    url: "https://example.com/gaeilge-resources",
-    author: "Conradh na Gaeilge",
-    date: "2024-01-05",
-    comment: "Excellent compilation of digital tools for Irish learners. The pronunciation guides are particularly well done for online formats."
-  }
-];
-
-export default function LinksBlog() {
+export default function LinksBlog({ linkEntries = [] }) {
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('ga-IE', { 
@@ -61,7 +18,7 @@ export default function LinksBlog() {
       </header>
       
       <main className="links-main">
-        {mockLinks.map((link) => (
+        {linkEntries.map((link) => (
           <article key={link.id} className="link-entry">
             <div className="link-meta">
               <time className="link-date">{formatDate(link.date)}</time>
