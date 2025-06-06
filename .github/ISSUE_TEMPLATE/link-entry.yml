@@ -1,7 +1,7 @@
 name: Add Link Entry
 description: Add a new link to the blog
 title: "[LINK] "
-labels: ["link", "published"]
+labels: ["link"]
 body:
   - type: input
     id: url
